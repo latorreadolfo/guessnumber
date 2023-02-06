@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GuessNumber</title>
     <link rel="stylesheet" href="./css/styles.css">
-    <script src="./js/index.js"></script>
+    <script src="./js/index.js" defer></script>
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,19 +18,19 @@
     </header>
 
     <main class="container">
-        <form>
+        <form id="form">
             <label for="kick">Type a number from 0 to 10:</label>
-            <input type="number" id="kick" max="10" placeholder="0">
+            <input type="number" id="kick" max="10" placeholder="type here">
 
             <button type="submit">Try your luck 🎰</button>
         </form>
 
         <section class="result-box" id="result"> 
-            <h2 id="status">Guess wich number has been choose! 🎲🍀🤞🏽</h2>
+            <h2 id="status">Guess wich number was drawn! 🎲🍀🤞🏽</h2>
             <span id="attempt">Tries: 0</span>
         </section>
 
-        <button id="btnRestart">Try again!</button>
+        <button id="btnRestart" onclick="restart()">Try again!</button>
     </main>
 
     <footer>
